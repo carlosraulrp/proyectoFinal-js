@@ -27,7 +27,7 @@ let articulos =[
         genero: "hombre",
         precio: 12000,
         stock: 8,
-        img:"../img/short-de-tenis-hombre-dry-500-azul-marino.webp"
+        img:"https://contents.mediadecathlon.com/p2454700/k$3044274e5c6f95734aaf630db5f37e18/short-de-tenis-dry-100-blanco-hombre.jpg?format=auto&quality=40&f=452x452"
     },
     {
         id: 13,
@@ -37,7 +37,7 @@ let articulos =[
         genero: "unisex",
         precio: 8000,
         stock: 10,
-        img:"../img/balon-de-futbol-sunny-300-talla-5-naranjoslashnegro.webp"
+        img:"https://http2.mlstatic.com/D_NQ_NP_782966-MLA52249028475_112022-O.jpg"
     },
     {
         id: 20,
@@ -57,7 +57,7 @@ let articulos =[
         genero: "mujer",
         precio: 32000,
         stock: 6,
-        img:"../img/botas-de-senderismo-montana-mujer-mh100-mid-impermeables-azul-turquesa.webp"
+        img:"https://www.desnivel.com/images/2013/03/x-ultra-mid-gtx-m-green-660x440.jpg"
     },
     {
         id: 15,
@@ -67,7 +67,7 @@ let articulos =[
         genero: "unisex",
         precio: 40000,
         stock: 5,
-        img:"../img/kit-pump-20-kg.webp"
+        img:"https://falabella.scene7.com/is/image/Falabella/7988504_1?wid=800&hei=800&qlt=70"
     },
     {
         id: 16,
@@ -77,7 +77,7 @@ let articulos =[
         genero: "mujer",
         precio: 14500,
         stock: 10,
-        img:"../img/traje-de-bano-de-natacion-para-mujer-una-pieza-heva-azul.webp"
+        img:"https://samiacl03.akamaized.net/7235-large_default/traje-de-bano-enterito-reductor-azul-marino.jpg"
     },
     {
         id: 17,
