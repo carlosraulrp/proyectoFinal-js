@@ -215,7 +215,7 @@ let buscador = document.getElementById("buscador")
 buscador.addEventListener("input", filtrar)
 function filtrar(){
     
-    let arrayFiltradoBuscador = productos.filter(element => element.nombre.includes(buscador.value)|| element.deporte.includes(buscador.value))
+    let arrayFiltradoBuscador = productos.filter(element => element.nombre.includes(buscador.value.toLowerCase())|| element.deporte.includes(buscador.value.toLowerCase()))
     renderizarProducto(arrayFiltradoBuscador)
     console.log(buscador.value) 
 }
