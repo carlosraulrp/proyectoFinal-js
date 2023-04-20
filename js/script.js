@@ -324,4 +324,3 @@ verCarrito.addEventListener("click",()=>{
 
 
 
-
