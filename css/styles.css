@@ -61,8 +61,8 @@ header{
 
 .divCarrito{
     width: 50%;
-    height: 40rem;
-    border: 2px black solid;
+    height: 100%;
+    
 }
 
 #carritoCaja img{
