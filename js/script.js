@@ -60,7 +60,7 @@ if (carrito.some(element => element.id === productoBuscado.id)) {
 function renderizarCarrito(arrayProductos){
     carritoCaja.innerHTML = ""
     arrayProductos.forEach(element=>{
-        carritoCaja.innerHTML+= `<h3>${element.nombre} ${element.precio}  cantidad ${element.unidades} ${element.subTotal}</h3>`
+        carritoCaja.innerHTML+= `<img class = "img-fluid" src="${element.img}" /><h3>${element.nombre} ${element.precio}  cantidad ${element.unidades} ${element.subTotal}</h3>`
     })
     if (carrito.length == 0) {
         carritoCaja.innerHTML = `
