@@ -12,6 +12,8 @@ fetch("../JSON/data.json")
 renderizarProducto(productos)
 function renderizarProducto (arrayProductos){
     let contenedor = document.getElementById("contenedorProductos")
+    let carritoIcon = document.getElementById("carritoIcon")
+    let vaciarCarrito = document.getElementById("vaciarCarrito")
     contenedor.innerHTML = ""
     arrayProductos.forEach(element => {                          //recorro el array que cree como parametro en la funcion
         let cardProducto = document.createElement("div")         //creo el div de la card
@@ -47,9 +49,11 @@ if (carrito.some(element => element.id === productoBuscado.id)) {
     productoBuscado.unidades = 1
     productoBuscado.subTotal= productoBuscado.precio 
     carrito.push(productoBuscado)   //agrego producto buscado al carrito
+    lanzarTostify()
     console.log(carrito) 
     renderizarCarrito(carrito)   //parametro carrito porque ya tendra un producto porque lo pusheamos en lineas anteriores
 }
+
 
 } 
 
@@ -58,7 +62,21 @@ function renderizarCarrito(arrayProductos){
     arrayProductos.forEach(element=>{
         carritoCaja.innerHTML+= `<h3>${element.nombre} ${element.precio}  cantidad ${element.unidades} ${element.subTotal}</h3>`
     })
+    if (carrito.length == 0) {
+        carritoCaja.innerHTML = `
+        <p>Carrito vacio, agrega un producto</p>
+        `
+    }else{
+        console.log("algo")
+    } 
+    carritoIcon.textContent = carrito.length  
 }
+
+//vaciar carrito
+vaciarCarrito.addEventListener("click", ()=>{
+    carrito.length = []
+    renderizarCarrito(carrito)
+})
 
 //configuramos la barra del buscador
 let buscador = document.getElementById("buscador")
@@ -108,12 +126,25 @@ let botonIngresar = document.getElementById("botonLogin")
 botonIngresar.addEventListener("click", () =>{
     let infoUsuario = JSON.parse(localStorage.getItem("infoUsuario"))
     if (infoUsuario.usuario == usuarioLg.value && infoUsuario.clave == claveLg.value) {
-        alert("Bienvenido, puede ver nuestros productos")
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'BIENVENIDO A NUESTRA TIENDA',
+            showConfirmButton: false,
+            timer: 1500
+          })
         contenedoraIngreso.classList.add("ocultar")
         contenedorPaginaCompra.classList.remove("ocultar") 
 
     } else {
-        alert("Datos ingresados incorrectos")
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            position:'center',
+            title: 'Datos ingresados incorrectos',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 })
 
@@ -137,6 +168,17 @@ verCarrito.addEventListener("click",()=>{
         padreCajaProductos.classList.remove("ocultar")
         seguirComprando.classList.add("ocultar")
     })
+
+    function lanzarTostify(){
+        Toastify({
+            text: "Producto agregado",
+            className: "info",
+            position: "center",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
+    }
 
     }
 
