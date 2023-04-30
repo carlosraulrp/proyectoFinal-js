@@ -71,7 +71,7 @@ function miProyecto(productos) {
         <p>Carrito vacio, agrega un producto</p>
         `
     } else {
-      console.log("algo");
+      console.log("algo")
     }
     carritoIcon.textContent = carrito.length;
   }
@@ -139,7 +139,7 @@ function miProyecto(productos) {
         title: "BIENVENIDO A NUESTRA TIENDA",
         showConfirmButton: false,
         timer: 1500,
-      });
+      })
       contenedoraIngreso.classList.add("ocultar")
       contenedorPaginaCompra.classList.remove("ocultar")
     } else {
@@ -166,7 +166,7 @@ function miProyecto(productos) {
     carritoCaja.classList.remove("ocultar")
     padreCajaProductos.classList.add("ocultar")
     seguirComprando.classList.remove("ocultar")
-  });
+  })
 
   seguirComprandoBoton.addEventListener("click", () => {
     carritoCaja.classList.add("ocultar")
