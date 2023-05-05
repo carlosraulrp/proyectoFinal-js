@@ -23,7 +23,7 @@ function miProyecto(productos) {
         <img src = ${element.img}>
         <h3>${element.nombre.toUpperCase()}</h3>
         <p> Deporte: ${element.deporte}<p/>
-        <p> Quedan: ${element.stock} Unidades<p/>
+        <p> Quedan: ${element.cantidad} Unidades<p/>
         <h3>PRECIO: ${element.precio}</h3>
         <button id=${
           element.id
